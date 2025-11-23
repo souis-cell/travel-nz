@@ -1,109 +1,69 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel New Zealand</title>
-    <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel New Zealand</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- ================= HEADER / NAV ================= -->
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="logo" width="90" height=90" />
-                <h2>Travel NZ</h2>
-            </div>
+<!-- NAVBAR -->
 
-            <nav class="site-nav">
-                <a href="#explore">Explore</a>
-                <a href="#about">About</a>
-            </nav>
-        </div>
-    </header>
+<div class="navbar">
+    <a href="index.html" class="logo"><img src="logo.png" alt="logo"><span>Travel NZ</span></a>
+    <a href="index.html"><i class="fa-solid fa-house"></i><span>HOME</span></a>
+    <a href="tour.html"><i class="fa-solid fa-plane"></i><span>TOUR</span></a>
+    <a href="contact.html"><i class="fa-solid fa-phone"></i><span>CONTACT</span></a>
+    <a href="login.html"><i class="fa-solid fa-user"></i><span>LOGIN</span></a>
+    <a href="signup.html"><i class="fa-solid fa-user-plus"></i><span>SIGNUP</span></a>
+</div>
 
-    <!-- ================= HERO ================= -->
-    <section class="hero" aria-label="Discover New Zealand">
-        <div
-            class="hero__bg"
-            style="background-image: url('31979-3840x2160-desktop-4k-new-zealand-background-image.jpg');">
-        </div>
+<!-- HERO -->
 
-        <div class="hero-inner">
-            <h1>Discover New Zealand</h1>
-            <p>Where every journey feels like home.</p>
-            <a class="btn" href="#explore">Explore Now</a>
-        </div>
-    </section>
+<section class="hero" style="background-image:url('https://wallpapercat.com/w/full/d/d/3/31979-3840x2160-desktop-4k-new-zealand-background-image.jpg'); background-size:cover; background-position:center;">
+    <div class="hero-inner">
+        <h1>Discover New Zealand</h1>
+        <p>Where every journey feels like home.</p>
+        <a href="#explore" class="btn">Explore Now</a>
+    </div>
+</section>
 
-    <!-- ================= MAIN CONTENT ================= -->
-    <main class="main-container">
+<!-- CARDS / EXPLORE -->
 
-        <!-- ---------- CARD SECTION ---------- -->
-        <section class="section" id="explore">
-            <div class="container">
+<section class="cards-wrapper" id="explore">
+    <div class="card">
+        <h3>Authentic</h3>
+        <p>Experience New Zealand in its truest form — honest people, real moments, and a culture built on warmth.</p>
+    </div>
+    <div class="card">
+        <h3>Wild</h3>
+        <p>From rugged coastlines to dramatic mountain peaks, New Zealand offers nature untouched and alive.</p>
+    </div>
+    <div class="card">
+        <h3>Unforgettable</h3>
+        <p>Every journey leaves its mark. Find places and experiences that stay with you long after you return home.</p>
+    </div>
+</section>
 
-                <div class="cards-wrapper">
-                    <article class="card">
-                        <h3>Authentic</h3>
-                        <p>
-                            Experience New Zealand in its truest form — honest people,
-                            real moments, and a culture built on warmth.
-                        </p>
-                    </article>
+<!-- ABOUT -->
 
-                    <article class="card">
-                        <h3>Wild</h3>
-                        <p>
-                            From rugged coastlines to dramatic mountain peaks, New Zealand
-                            offers nature untouched and alive.
-                        </p>
-                    </article>
+<section class="section--dark" id="about">
+    <h2>About Us</h2>
+    <p>Travel NZ was created to help people experience New Zealand authentically, wildly, and memorably. Our guides highlight the best routes, stays, and activities, ensuring every journey is unforgettable.</p>
+    <p>Whether hiking alpine passes or exploring hidden beaches, we provide tools and ideas to explore confidently and enjoy every moment.</p>
+</section>
 
-                    <article class="card">
-                        <h3>Unforgettable</h3>
-                        <p>
-                            Every journey leaves its mark. Find places and experiences
-                            that stay with you long after you return home.
-                        </p>
-                    </article>
-                </div>
+<!-- FOOTER -->
 
-            </div>
-        </section>
-
-        <!-- ---------- ABOUT SECTION ---------- -->
-        <section class="section section--dark" id="about">
-            <div class="container">
-                <h2>About</h2>
-                <p>
-                    New Zealand is a land of legends — ancient Māori culture, dramatic
-                    landscapes shaped by fire and ice, and a spirit of adventure woven into
-                    every corner of the country.
-                </p>
-                <p>
-                    Whether you're hiking the Southern Alps, cruising through Milford Sound,
-                    exploring glowworm caves, or stargazing under the clearest skies on Earth,
-                    New Zealand invites you to slow down, breathe deeply, and feel alive.
-                </p>
-                <p>
-                    This travel guide brings together iconic destinations, hidden gems,
-                    cultural insights, and practical tips, helping you plan the perfect
-                    journey across Aotearoa.
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="site-footer">
-        <div class="container">
-            <p>© 2025 Travel NZ — Designed for explorers.</p>
-        </div>
-    </footer>
+<footer>
+    <p>&copy; 2025 Travel NZ — Designed for explorers. <a href="privacypolicy.html" target="_blank">Privacy Policy</a></p>
+</footer>
 
 </body>
 </html>
+
