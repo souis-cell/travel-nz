@@ -1,0 +1,224 @@
+/* ---------- Design system vars ---------- */
+:root{
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+
+  --card-shadow: 0 10px 30px rgba(15,20,25,0.08);
+  --elev-shadow: 0 18px 50px rgba(15,20,25,0.10);
+
+  --container-max: 1100px;
+
+  --clr-bg: #fbfbfb;
+  --clr-surface: #ffffff;
+  --clr-muted: #8b8b8b;
+  --clr-primary: #27645a; /* tweak to match your brand */
+  --clr-accent: #f5a623;
+  --text: #222;
+}
+
+/* ---------- Reset / base ---------- */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Merriweather", Georgia, serif; /* fallback if you used this */
+  color:var(--text);
+  background: var(--clr-bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+  font-size:16px;
+}
+
+/* ---------- Utility / Container ---------- */
+.container, .main-container{
+  max-width:var(--container-max);
+  margin:0 auto;
+  padding:0 var(--space-md);
+}
+
+/* A general page section */
+.section{
+  padding: var(--space-lg) 0;
+}
+
+/* Headings */
+h1{
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  line-height:1.12;
+  margin:0 0 var(--space-md) 0;
+  font-weight:700;
+  letter-spacing:0.6px;
+}
+
+h2{
+  font-size: clamp(1.25rem, 3.0vw, 1.9rem);
+  margin: 0 0 var(--space-sm) 0;
+  font-weight:700;
+}
+
+/* Paragraphs and links */
+p{
+  margin:0 0 var(--space-md) 0;
+  color: #333;
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  line-height:1.65;
+}
+
+a{
+  color:var(--clr-primary);
+  text-decoration:none;
+}
+
+/* ---------- NAV ---------- */
+header.site-header{
+  background: #fff;
+  border-bottom: 1px solid rgba(20,20,20,0.03);
+  position: sticky;
+  top:0;
+  z-index:100;
+}
+
+.site-header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 0;
+}
+
+.site-header .logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* nav links */
+.site-nav{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  font-size:0.98rem;
+}
+
+/* Mobile hamburger fallback */
+.site-nav .hamburger{display:none}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  min-height:56vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color: #fff;
+  overflow:hidden;
+  padding: var(--space-lg) 0;
+}
+
+.hero__bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  z-index:0;
+}
+
+/* overlay to increase contrast on hero */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.36) 100%);
+  z-index:1;
+}
+
+.hero .hero-inner{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  padding: 0 var(--space-md);
+}
+
+/* hero text styles */
+.hero h1{ color:#fff; font-weight:700; margin-bottom:12px; }
+.hero p{ color: rgba(255,255,255,0.9); margin-bottom:22px; font-size:1.05rem; }
+
+/* hero CTA */
+.btn{
+  display:inline-block;
+  background:var(--clr-accent);
+  color:#fff;
+  padding:12px 20px;
+  border-radius:999px;
+  font-weight:700;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  text-decoration:none;
+}
+
+/* ---------- CARDS ---------- */
+.cards-wrapper{
+  display:grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+  align-items:start;
+}
+
+/* white card */
+.card{
+  background:var(--clr-surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(15,20,25,0.03);
+}
+
+/* card title and body */
+.card h3{
+  margin:0 0 8px 0;
+  font-size:1.15rem;
+  color: #134;
+}
+
+.card p{ margin:0 0 12px 0; color:var(--clr-muted) }
+
+/* subtle center example card */
+.card--center{ text-align:center }
+
+/* ---------- ABOUT / dark section ---------- */
+.section--dark{
+  background:#0f0f10;
+  color:#fff;
+  padding: var(--space-lg) 0;
+  border-radius: 12px;
+  margin-top: var(--space-lg);
+}
+
+/* footer spacing */
+.site-footer{ padding: var(--space-lg) 0; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (min-width: 640px){
+  .cards-wrapper{ grid-template-columns: repeat(3, 1fr); }
+  .hero{ min-height: 68vh; }
+  .site-nav{ gap:22px; }
+}
+
+@media (min-width: 1000px){
+  .container{ padding:0 var(--space-lg); }
+  .hero{ min-height:72vh; }
+}
+
+/* ---------- small screens tweaks ---------- */
+@media (max-width:420px){
+  h1{ font-size:1.8rem; }
+  .site-header .container{ padding:10px var(--space-sm); }
+  .card{ padding: var(--space-md); }
+  .cards-wrapper{ gap: var(--space-md); }
+  }
