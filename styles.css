@@ -31,7 +31,7 @@ margin-right:6px; opacity:0; transition: all 0.3s;
 }
 .navbar a:hover i{opacity:1; transform: translateX(-10px); color:#1e83ff;}
 .navbar a:hover span{transform: scale(0.9); color:grey;}
-.logo img{width:100px; margin-right:10px;}
+.logo img{width:40px; margin-right:40px;}
 
 /* ---------- HERO ---------- */
 .hero{
